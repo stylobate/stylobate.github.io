@@ -27,9 +27,9 @@ link_handles:
 ## Localization
 langs:
     - en
-    # - ru
+    - ru
 
-default_lang: en
+default_lang: ru
 
 loc:
     laquo:
