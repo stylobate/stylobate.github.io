@@ -1,0 +1,25 @@
+{
+  "private": true,
+
+  "name": "stylobate-github-io",
+  "version": "0.0.0",
+
+  "author": "Roman Komarov <kizmarh@ya.ru> (http://kizu.ru/en/)",
+  "licence": "MIT",
+
+  "description": "Site for the Stylobate",
+  "homepage": "https://github.com/stylobate/stylobate.github.io#readme",
+  "bugs": { "url": "http://github.com/stylobate/stylobate.github.io/issues" },
+
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stylobate/stylobate.github.io.git"
+  },
+  "dependencies": {
+    "stylus": "0.36.x",
+    "autoprefixer": "0.7.x",
+    "stylobate": "0.6.x"
+  },
+
+  "engines": { "node": ">=0.6" }
+}

@@ -5,10 +5,10 @@ permalink: /:categories/:title
 relative_permalinks: false
 
 ## Uncomment and set your GitHub username to enable absolute links
-# github_user: kizu
+github_user: stylobate
 
 ## Production URL (if different from default GitHub Pages one)
-# production_url: http://example.com/textyll
+production_url: http://stylobate.github.io
 
 ## Comment out if (in absence of above fields) you'd like to use absolute `/` links
 relative_urls_when_possible: true
