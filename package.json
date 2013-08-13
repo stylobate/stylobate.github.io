@@ -17,8 +17,7 @@
   },
   "dependencies": {
     "stylus": "0.36.x",
-    "autoprefixer": "0.7.x",
-    "stylobate": "0.6.x"
+    "autoprefixer": "0.7.x"
   },
 
   "engines": { "node": ">=0.6" }

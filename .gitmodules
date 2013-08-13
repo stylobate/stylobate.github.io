@@ -1,3 +1,9 @@
 [submodule "_includes/tenkan"]
 	path = _includes/tenkan
 	url = git://github.com/kizu/tenkan.git
+[submodule "s/stylobate-wireframe"]
+	path = s/stylobate-wireframe
+	url = https://github.com/stylobate/stylobate-wireframe.git
+[submodule "s/stylobate"]
+	path = s/stylobate
+	url = https://github.com/kizu/stylobate.git
