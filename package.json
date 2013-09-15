@@ -16,8 +16,8 @@
     "url": "git://github.com/stylobate/stylobate.github.io.git"
   },
   "dependencies": {
-    "stylus": "0.36.x",
-    "autoprefixer": "0.7.x"
+    "stylus": "0.37.x",
+    "autoprefixer": "0.8.x"
   },
 
   "engines": { "node": ">=0.6" }
