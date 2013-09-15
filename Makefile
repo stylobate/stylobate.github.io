@@ -17,4 +17,7 @@ up:
 	git pull --rebase && \
 	cd ../..
 
+serve:
+	jekyll serve --port 4001 --watch --config _config.yml,_config-dev.yml
+
 .PHONY: build
