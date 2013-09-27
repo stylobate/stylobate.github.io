@@ -9,7 +9,7 @@
 
                 {% capture partial_code %}
 <span class="small-pseudo-button toggle-button js-outer-toggler"><span class="button-content">исходный код скина</span></span>  
-[оно же на Гитхабе](https://github.com/kizu/stylobate/tree/master/{{ page.partials }}{{ item.path | split:'/' | last | split:'_' | first | remove:'.md' | remove:'kind-' }}/){:.outer-link}
+[оно же на Гитхабе]({{ page.partials_url }}/tree/master/{{ page.partials }}{{ item.path | split:'/' | last | split:'_' | first | remove:'.md' | remove:'kind-' }}/){:.outer-link}
 
 <pre class="language-styl is-hidden" data-src="s/stylobate/{{ page.partials }}{{ item.path | split:'/' | last | split:'_' | first | remove:'.md' | remove:'kind-' }}/{{ item.path | split:'/' | last | replace:'.md','.styl' }}"></pre>
                 {% endcapture %}

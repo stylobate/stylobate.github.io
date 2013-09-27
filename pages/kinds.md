@@ -2,9 +2,10 @@
 
 layout: default
 
-partials: 'kinds/'
-
 permalink: /kinds/
+
+partials: 'kinds/'
+partials_url: 'https://github.com/kizu/stylobate'
 
 ---
 
