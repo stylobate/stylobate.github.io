@@ -1,0 +1,21 @@
+body {
+  font: 1em/1.5 "Helvetica Neue", Arial, sans-serif;
+}
+
+content {
+  display: block;
+  max-width: 62em;
+  margin: 0 auto;
+}
+
+article {
+  max-width: 42em;
+  margin: 0 10em 5em auto;
+}
+
+aside {
+  float: right;
+  clear: right;
+  width: 9em;
+  margin: 0 -10em 1em 1em;
+}

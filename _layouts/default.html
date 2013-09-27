@@ -1,4 +1,4 @@
-<!DOCTYPE html>{% include setup.md %}
+<!DOCTYPE html>{% include setup.md %}{% include partials.md %}
 <html class="page{{ page_lang_class }}{{ page_type_class }}{{ page_category_class }}">
 <head>
 	<meta charset="utf-8"/>
@@ -11,13 +11,17 @@
     <title>{{ title }}</title>
 </head>
 <body class="page-body">
-    <h1>{{ title }}</h1>
-    <div>
+    <nav>
         {{ toc }}
-    </div>
-    <div>
-        {{ processed_content }}
-    </div>
+        {{ partials_toc }}
+    </nav>
+    <content>
+        <article>
+            <h1>{{ title }}</h1>
+            {{ processed_content }}
+        </article>
+        {{ partials_content }}
+    </content>
 
     <script src="{{ root_url }}j/script.js"></script>
 </body>
