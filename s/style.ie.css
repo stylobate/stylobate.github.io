@@ -41,6 +41,18 @@ content aside {
   margin: 0 -225px 15px 15px;
   font-size: 0.8em;
 }
+content h1:before,
+content h2:before,
+content h3:before,
+content h4:before,
+content h5:before,
+content h6:before {
+  content: "";
+  display: block;
+  height: 45px;
+  width: 0;
+  margin-top: -45px;
+}
 content > nav {
   position: fixed;
   top: 0;
@@ -63,6 +75,9 @@ content > nav > a {
 }
 content > nav > a:hover {
   color: #d00;
+}
+.aside-nav-item_0 {
+  font-size: 1.5em;
 }
 .aside-nav-item_2 {
   padding-left: 30px;

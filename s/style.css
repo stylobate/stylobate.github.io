@@ -50,6 +50,19 @@ content aside {
   font-size: 0.8em;
 }
 
+content h1:before,
+content h2:before,
+content h3:before,
+content h4:before,
+content h5:before,
+content h6:before {
+  content: "";
+  display: block;
+  height: 4.5rem;
+  width: 0;
+  margin-top: -4.5rem;
+}
+
 content > nav {
   position: fixed;
   top: 0;
@@ -74,6 +87,10 @@ content > nav > a {
 
 content > nav > a:hover {
   color: #d00;
+}
+
+.aside-nav-item_0 {
+  font-size: 1.5em;
 }
 
 .aside-nav-item_2 {

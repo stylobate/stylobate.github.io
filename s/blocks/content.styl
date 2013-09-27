@@ -20,3 +20,17 @@ content aside
   margin: 0 -15*$m 1*$m 1*$m
 
   font-size: 0.8em
+
+// Fixing fixed header and targets
+content h1:before,
+content h2:before,
+content h3:before,
+content h4:before,
+content h5:before,
+content h6:before
+  content: ""
+  display: block
+
+  height: 3*$m
+  width: 0
+  margin-top: -3*$m
