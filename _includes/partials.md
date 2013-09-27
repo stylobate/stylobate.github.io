@@ -13,8 +13,11 @@
 
 <pre class="language-styl is-hidden" data-src="s/stylobate/{{ page.partials }}{{ item.path | split:'/' | last | split:'_' | first | remove:'.md' | remove:'kind-' }}/{{ item.path | split:'/' | last | replace:'.md','.styl' }}"></pre>
                 {% endcapture %}
+                
+                {% capture id_replacement_0 %}id="{{ item_id }}_0"{% endcapture %}
+                {% capture id_replacement %}id="{{ item_id }}_{% endcapture %}
 
-                {% capture partials_content %}{{ partials_content }}
+                {% capture partials_raw_content %}
 <article markdown="1">
 <aside markdown="1">
 {{ partial_code }}
@@ -24,6 +27,7 @@
 {{ item.content | replace:' class="example:',replace_example }}
 </article>
                 {% endcapture %}
+                {% capture partials_content %}{{ partials_content }}{{ partials_raw_content | markdownify | replace:'id="section"',id_replacement_0 | replace:'id="section-',id_replacement }}{% endcapture %}
             {% endif %}
         {% endfor %}
 
