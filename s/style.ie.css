@@ -7,7 +7,10 @@ header h1 {
   vertical-align: baseline;
 }
 html {
-  font: 1em/1.5 "Helvetica Neue", Arial, sans-serif;
+  font: 10px/1.5 "Helvetica Neue", Arial, sans-serif;
+}
+body {
+  font-size: 18px;
 }
 .is-hidden {
   display: none !important;
@@ -22,20 +25,20 @@ a:hover {
 }
 content {
   display: block;
-  max-width: 72rem;
-  margin: 0 auto;
+  max-width: 1080px;
+  margin: 45px auto 0;
 }
 content > article {
-  max-width: 42rem;
-  margin: 0 15rem 5rem;
+  max-width: 630px;
+  margin: 0 225px 75px;
 }
 content aside {
   position: sticky;
-  top: 0;
+  top: 45px;
   float: right;
   clear: right;
-  width: 14rem;
-  margin: 0 -15rem 1rem 1rem;
+  width: 210px;
+  margin: 0 -225px 15px 15px;
   font-size: 0.8em;
 }
 content > nav {
@@ -45,9 +48,10 @@ content > nav {
   bottom: 0;
   left: 0;
   background: #fff;
-  width: 14rem;
+  top: 45px;
+  width: 210px;
   overflow: auto;
-  padding-top: 30px;
+  padding: 0 0 45px;
 }
 content > nav > a {
   position: relative;
@@ -55,10 +59,18 @@ content > nav > a {
   cursor: pointer;
   color: #22c;
   text-decoration: none;
-  padding: 5px 10px;
+  padding: 7.5px 15px;
 }
 content > nav > a:hover {
   color: #d00;
+}
+.aside-nav-item_2 {
+  padding-left: 30px;
+  font-size: 0.875em;
+}
+.aside-nav-item_3 {
+  padding-left: 45px;
+  font-size: 0.75em;
 }
 code[class*="language-"],
 pre[class*="language-"] {
@@ -170,24 +182,32 @@ blockquote pre > code {
   background: rgba(245,242,240,0.4);
 }
 header {
-  max-width: 42em;
-  margin: 0 auto 5em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  height: 45px;
+  padding: 0 225px;
+  background: rgba(255,255,255,0.8);
+}
+header nav {
+  display: block;
+  max-width: 630px;
+  margin: 0 auto 75px;
 }
 header h1 {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 9;
-  width: 140px;
-  overflow: scroll;
-  visibility: hidden;
+  width: 210px;
 }
 header h1 > span,
 header h1 > a {
   display: block;
-  visibility: visible;
-  padding: 10px;
-  font-size: 20px;
-  line-height: 10px;
-  background: rgba(255,255,255,0.8);
+  padding: 15px;
+  font-size: 30px;
+  line-height: 15px;
 }

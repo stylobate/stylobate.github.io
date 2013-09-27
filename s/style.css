@@ -8,7 +8,11 @@ header h1 {
 }
 
 html {
-  font: 1em/1.5 "Helvetica Neue", Arial, sans-serif;
+  font: 10px/1.5 "Helvetica Neue", Arial, sans-serif;
+}
+
+body {
+  font-size: 18px;
 }
 
 .is-hidden {
@@ -27,22 +31,22 @@ a:hover {
 
 content {
   display: block;
-  max-width: 72rem;
-  margin: 0 auto;
+  max-width: 108rem;
+  margin: 4.5rem auto 0;
 }
 
 content > article {
-  max-width: 42rem;
-  margin: 0 15rem 5rem;
+  max-width: 63rem;
+  margin: 0 22.5rem 7.5rem;
 }
 
 content aside {
   position: sticky;
-  top: 0;
+  top: 4.5rem;
   float: right;
   clear: right;
-  width: 14rem;
-  margin: 0 -15rem 1rem 1rem;
+  width: 21rem;
+  margin: 0 -22.5rem 1.5rem 1.5rem;
   font-size: 0.8em;
 }
 
@@ -53,9 +57,10 @@ content > nav {
   bottom: 0;
   left: 0;
   background: #fff;
-  width: 14rem;
+  top: 4.5rem;
+  width: 21rem;
   overflow: auto;
-  padding-top: 3rem;
+  padding: 0 0 4.5rem;
 }
 
 content > nav > a {
@@ -64,11 +69,21 @@ content > nav > a {
   cursor: pointer;
   color: #22c;
   text-decoration: none;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1.5rem;
 }
 
 content > nav > a:hover {
   color: #d00;
+}
+
+.aside-nav-item_2 {
+  padding-left: 3rem;
+  font-size: 0.875em;
+}
+
+.aside-nav-item_3 {
+  padding-left: 4.5rem;
+  font-size: 0.75em;
 }
 
 code[class*="language-"],
@@ -219,26 +234,35 @@ blockquote pre > code {
 }
 
 header {
-  max-width: 42em;
-  margin: 0 auto 5em;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 9;
+  height: 4.5rem;
+  padding: 0 22.5rem;
+  background: rgba(255,255,255,0.8);
+}
+
+header nav {
+  display: block;
+  max-width: 63rem;
+  margin: 0 auto 7.5rem;
 }
 
 header h1 {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 9;
-  width: 14rem;
-  overflow: scroll;
-  visibility: hidden;
+  width: 21rem;
 }
 
 header h1 > span,
 header h1 > a {
   display: block;
-  visibility: visible;
-  padding: 1rem;
-  font-size: 2rem;
-  line-height: 1rem;
-  background: rgba(255,255,255,0.8);
+  padding: 1.5rem;
+  font-size: 3rem;
+  line-height: 1.5rem;
 }
