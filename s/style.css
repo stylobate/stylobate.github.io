@@ -46,3 +46,176 @@ nav > a {
 nav > a:hover {
   color: #d00;
 }
+
+.is-hidden {
+  display: none !important;
+}
+
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #000;
+  text-shadow: 0 1px #fff;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+  -moz-tab-size: 4;
+  -o-tab-size: 4;
+  tab-size: 4;
+  -webkit-hyphens: none;
+  -moz-hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
+}
+
+::-moz-selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+::selection {
+  text-shadow: none;
+  background: #b3d4fc;
+}
+
+@media print {
+  code[class*="language-"],
+  pre[class*="language-"] {
+    text-shadow: none;
+  }
+}
+
+code[class*="language-"] {
+  background: rgba(245,242,240,0.6);
+}
+
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+  border-radius: 0.3em;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #778090;
+}
+
+.token.punctuation {
+  color: #999;
+}
+
+.namespace {
+  opacity: 0.7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number {
+  color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string {
+  color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255,255,255,0.5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+
+.token.regex,
+.token.important {
+  color: #e90;
+}
+
+.token.important {
+  font-weight: bold;
+}
+
+.token.entity {
+  cursor: help;
+}
+
+.token a {
+  color: inherit;
+}
+
+code,
+pre,
+kbd {
+  font-family: Monaco, Consolas, monospace;
+  font-size: 0.87em;
+}
+
+pre > code {
+  font-size: 1em;
+}
+
+pre {
+  position: relative;
+  overflow: hidden;
+  overflow-x: auto;
+  padding: 0;
+  margin: 0 -1.5rem 1.5rem;
+}
+
+li > pre {
+  margin-left: 0;
+}
+
+blockquote pre {
+  margin-top: 1rem;
+  margin-left: -1.8rem;
+}
+
+pre > code {
+  display: inline-block;
+  vertical-align: top;
+  padding: 1rem 1.5rem;
+  margin-bottom: 0;
+}
+
+blockquote pre > code {
+  padding-left: 1.8rem;
+}
+
+blockquote > hr {
+  margin: 0;
+  border: 0;
+}
+
+hr {
+  margin: 2rem 0;
+  padding: 0;
+  border: none;
+  border-top: 1px solid #dddcda;
+}
+
+.page pre > code {
+  background: rgba(245,242,240,0.4);
+}
+
+a {
+  cursor: pointer;
+  color: #22c;
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #d00;
+}

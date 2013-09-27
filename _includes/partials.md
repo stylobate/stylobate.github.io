@@ -9,11 +9,11 @@
                 {% capture partials_path_remove %}{{ page.partials_path_remove }}{% endcapture %}
 
                 {% capture partial_code %}
-{% if page.partials_source %}<span class="small-pseudo-button toggle-button js-outer-toggler"><span class="button-content">исходный код скина</span></span>{% endif %}
 {% if page.partials_source %}[Все файлы блока на гитхабе]({{ page.partials_url }}/tree/master/{{ page.partials }}{{ item.path | split:'/' | last | split:'_' | first | remove:'.md' | remove:'kind-' }}/){:.outer-link}{% endif %}
 [Текст секции на Гитхабе]({{ page.partials_url }}/tree/master/{{ item.path | remove:partials_path_remove }}){:.outer-link}
+{% if page.partials_source %}<span class="small-pseudo-button toggle-button js-outer-toggler"><span class="button-content">исходный код скина</span></span>{% endif %}
 
-<pre class="language-styl is-hidden" data-src="s/stylobate/{{ page.partials }}{{ item.path | split:'/' | last | split:'_' | first | remove:'.md' | remove:'kind-' }}/{{ item.path | split:'/' | last | replace:'.md','.styl' }}"></pre>
+<pre class="language-styl is-hidden" data-src="/{{ partials_path_remove }}{{ page.partials }}{{ item.path | split:'/' | last | split:'_' | first | remove:'.md' | remove:'kind-' }}/{{ item.path | split:'/' | last | replace:'.md','.styl' }}"></pre>
                 {% endcapture %}
                 
                 {% capture id_replacement_0 %}id="{{ item_id }}_0"{% endcapture %}
@@ -29,7 +29,7 @@
 {{ item.content | replace:' class="example:',replace_example }}
 </article>
                 {% endcapture %}
-                {% capture partials_content %}{{ partials_content }}{{ partials_raw_content | markdownify | replace:'id="section"',id_replacement_0 | replace:'id="section-',id_replacement }}{% endcapture %}
+                {% capture partials_content %}{{ partials_content }}{{ partials_raw_content | markdownify | replace:'id="section"',id_replacement_0 | replace:'id="section-',id_replacement | replace:'<code>','<code class="language-styl">' }}{% endcapture %}
             {% endif %}
         {% endfor %}
 

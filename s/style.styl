@@ -49,3 +49,60 @@ nav
 nav > a
   kind: block, link
   padding: 0.5rem 1rem
+
+.is-hidden
+  kind: hidden
+
+@import "prism"
+
+// Where to move this stuff?
+code,
+pre,
+kbd
+  font-family: Monaco, Consolas, monospace
+  font-size: 0.87em
+  zoom: 1
+
+pre > code
+  font-size: 1em
+
+
+pre
+  position: relative
+  overflow: hidden
+  overflow-x: auto
+
+  padding: 0
+  margin: 0 -1*$m $m
+
+li > pre
+  margin-left: 0
+
+blockquote pre
+  margin-top: $s
+  margin-left: -1*($l - 0.2*rem)
+
+pre > code
+  display: inline-block
+  vertical-align: top
+  padding: $s $m
+  margin-bottom: 0
+
+blockquote pre > code
+  padding-left: $l - 0.2*rem
+
+blockquote > hr
+  margin: 0
+  border: 0
+
+hr
+  margin: $l 0
+  padding: 0
+  border: none
+  border-top: 1px solid #DDDCDA
+
+.page pre > code
+  background: rgba(245,242,240,0.4)
+
+a
+  kind: link underline

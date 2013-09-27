@@ -40,3 +40,133 @@ nav > a {
 nav > a:hover {
   color: #d00;
 }
+.is-hidden {
+  display: none !important;
+}
+code[class*="language-"],
+pre[class*="language-"] {
+  color: #000;
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  direction: ltr;
+  text-align: left;
+  white-space: pre;
+  word-spacing: normal;
+}
+::-moz-selection {
+  background: #b3d4fc;
+}
+::selection {
+  background: #b3d4fc;
+}
+@media print {
+}
+code[class*="language-"] {
+  background: rgba(245,242,240,0.6);
+}
+:not(pre) > code[class*="language-"] {
+  padding: 0.1em;
+}
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+  color: #778090;
+}
+.token.punctuation {
+  color: #999;
+}
+.namespace {
+  opacity: 0.7;
+}
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number {
+  color: #905;
+}
+.token.selector,
+.token.attr-name,
+.token.string {
+  color: #690;
+}
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+  color: #a67f59;
+  background: rgba(255,255,255,0.5);
+}
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+  color: #07a;
+}
+.token.regex,
+.token.important {
+  color: #e90;
+}
+.token.important {
+  font-weight: bold;
+}
+.token.entity {
+  cursor: help;
+}
+.token a {
+  color: inherit;
+}
+code,
+pre,
+kbd {
+  font-family: Monaco, Consolas, monospace;
+  font-size: 0.87em;
+  zoom: 1;
+}
+pre > code {
+  font-size: 1em;
+}
+pre {
+  position: relative;
+  overflow: hidden;
+  overflow-x: auto;
+  padding: 0;
+  margin: 0 -15px 15px;
+}
+li > pre {
+  margin-left: 0;
+}
+blockquote pre {
+  margin-top: 10px;
+  margin-left: -18px;
+}
+pre > code {
+  display: inline;
+  zoom: 1;
+  vertical-align: top;
+  padding: 10px 15px;
+  margin-bottom: 0;
+}
+blockquote pre > code {
+  padding-left: 18px;
+}
+blockquote > hr {
+  margin: 0;
+  border: 0;
+}
+hr {
+  margin: 20px 0;
+  padding: 0;
+  border: none;
+  border-top: 1px solid #dddcda;
+}
+.page pre > code {
+  background: rgba(245,242,240,0.4);
+}
+a {
+  cursor: pointer;
+  color: #22c;
+  text-decoration: underline;
+}
+a:hover {
+  color: #d00;
+}
