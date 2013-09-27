@@ -5,13 +5,22 @@ header
   height: 3*$m
   padding: 0 15*$m
 
+  line-height: $m
+
   background: rgba(#FFF, 0.8)
+  box-shadow: 0 1px 0 0 rgba(0,0,0,0.2)
 
 header nav
-  display: block
+  kind: list
 
   max-width: 42*$m
   margin: 0 auto 5*$m
+
+  & > a
+    kind: list-item
+    padding: $m 0.5*$m
+    position: relative
+    left: -0.5*$m
 
 header h1
   reset: h1
@@ -30,6 +39,5 @@ header h1
     padding: $m
 
     font-size: 2*$m
-    line-height: $m
 
 

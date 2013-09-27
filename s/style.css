@@ -259,13 +259,26 @@ header {
   z-index: 9;
   height: 4.5rem;
   padding: 0 22.5rem;
+  line-height: 1.5rem;
   background: rgba(255,255,255,0.8);
+  box-shadow: 0 1px 0 0 rgba(0,0,0,0.2);
 }
 
 header nav {
+  position: relative;
   display: block;
+  text-align: left;
   max-width: 63rem;
   margin: 0 auto 7.5rem;
+}
+
+header nav > a {
+  position: relative;
+  display: inline-block;
+  vertical-align: top;
+  padding: 1.5rem 0.75rem;
+  position: relative;
+  left: -0.75rem;
 }
 
 header h1 {
@@ -281,5 +294,4 @@ header h1 > a {
   display: block;
   padding: 1.5rem;
   font-size: 3rem;
-  line-height: 1.5rem;
 }
