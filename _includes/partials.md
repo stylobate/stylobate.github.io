@@ -2,8 +2,9 @@
     {% if page.partials %}
         {% assign sorted_pages = site.pages | sort:'path' %}
         {% assign partials_content = '' %}
+        {% capture lang_check %}.{{ lang }}{% endcapture %}
         {% for item in sorted_pages %}
-            {% if item.path contains page.partials %}
+            {% if item.path contains page.partials and item.path contains lang_check %}
                 {% assign item_id = item.path | split:'/' | last | remove:'.md' %}
                 {% capture replace_example %} class="example:/{{item.path | remove:item_id | remove:'.md'}}tests/{% endcapture %}
                 {% capture partials_path_remove %}{{ page.partials_path_remove }}{% endcapture %}

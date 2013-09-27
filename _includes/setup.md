@@ -24,7 +24,7 @@ Setting the greeting content if nothing there in `index.md`
         {% assign toc_input = processed_content %}
     {% endif %}
 
-Getting the language from the categories of url
+Getting the language from the categories or url
 
     {% assign lang = site.default_lang %}
 
@@ -36,6 +36,13 @@ Getting the language from the categories of url
             {% endif %}
         {% endif %}
     {% endfor %}
+
+Setting the lang prefix
+
+    {% assign lang_prefix = '' %}
+    {% if lang != site.default_lang %}
+        {% capture lang_prefix %}{{ lang }}/{% endcapture %}
+    {% endif %}
 
 Handling links
 
@@ -82,8 +89,10 @@ Setting the page lang class
 Setting the page type class
 
     {% assign page_type_class = '' %}
-    {% if page.permalink == '/' %}
+    {% capture index_test %}/{{ lang_prefix }}{% endcapture %}
+    {% if page.permalink == index_test %}
         {% capture page_type_class %} page_index{% endcapture %}
+        {% assign is_index = true %}
     {% endif %}
     {% if page.page_type_class %}
         {% capture page_type_class %} page_{{ page.page_type_class }}{% endcapture %}

@@ -11,6 +11,6 @@ partials_source: true
 
 ---
 
-# Типы
+# Kinds
 
-Привет, мир!1
+Hello, world

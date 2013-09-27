@@ -11,11 +11,24 @@
     <title>{{ title }}</title>
 </head>
 <body class="page-body">
-    <nav>
-        {{ toc }}
-        {{ partials_toc }}
-    </nav>
+    <header>
+        <h1>
+            {% if is_index %}<span>{% else %}<a href="/{{ lang_prefix }}">{% endif %}
+                {{ site.loc.stylobate | map:lang }}
+            {% if is_index %}</span>{% else %}</a>{% endif %}
+        </h1>
+        <nav>
+            <a href="/kinds/">kinds</a>
+            <a href="/concept/">concept</a>
+            <a href="/ru/kinds/">ru/kinds</a>
+            <a href="/ru/concept/">ru/concept</a>
+        </nav>
+    </header>
     <content>
+        <nav>
+            {{ toc }}
+            {{ partials_toc }}
+        </nav>
         <article>
             <h1>{{ title }}</h1>
             {{ processed_content }}
