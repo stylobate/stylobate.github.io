@@ -14,7 +14,11 @@
     <header>
         <h1>
             {% if is_index %}<span>{% else %}<a href="/{{ lang_prefix }}">{% endif %}
-                {{ site.loc.stylobate | map:lang }}
+                {% for lol in site.loc.stylobate %}
+                    {% if lol[0] == lang %}
+                        {{ lol[1] }}
+                    {% endif %}
+                {% endfor %}
             {% if is_index %}</span>{% else %}</a>{% endif %}
         </h1>
         <nav>
