@@ -9,6 +9,7 @@ header h1,
 }
 html {
   font: 10px/1.5 "Helvetica Neue", Arial, sans-serif;
+  overflow-y: scroll;
 }
 body {
   font-size: 18px;
@@ -216,8 +217,8 @@ header nav {
   max-width: 630px;
   margin: 0 auto 75px;
 }
-header nav > a,
-header nav > strong {
+header nav a,
+header nav strong {
   position: relative;
   display: inline;
   zoom: 1;
@@ -225,6 +226,7 @@ header nav > strong {
   padding: 15px 7.5px;
   position: relative;
   left: -7.5px;
+  font-weight: normal;
 }
 header h1 {
   position: absolute;
@@ -241,5 +243,4 @@ header h1 > a {
 }
 .langs {
   float: right;
-  line-height: 45px;
 }
