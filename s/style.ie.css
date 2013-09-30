@@ -40,7 +40,7 @@ content aside {
   float: right;
   clear: right;
   width: 210px;
-  margin: 0 -225px 15px 15px;
+  margin: 45px -225px 15px 15px;
   font-size: 0.8em;
 }
 content h1:before,
@@ -208,7 +208,7 @@ header {
   height: 45px;
   padding: 0 225px;
   line-height: 15px;
-  background: rgba(255,255,255,0.8);
+  background: rgba(255,255,255,0.9);
 }
 header nav {
   position: relative;
