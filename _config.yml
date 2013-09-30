@@ -1,5 +1,6 @@
 markdown: kramdown
 safe: false
+exclude: ["vendor"]
 
 permalink: /:categories/:title
 relative_permalinks: false
