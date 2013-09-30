@@ -23,6 +23,9 @@ link_handles:
 # quoted_link_wrapper_class: link link-wrapper
 # quoted_link_inner_class: link-inner
 
+menu:
+    - concept
+    - kinds
 
 ## Localization
 langs:

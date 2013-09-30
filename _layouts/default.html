@@ -22,10 +22,37 @@
             {% if is_index %}</span>{% else %}</a>{% endif %}
         </h1>
         <nav>
-            <a href="/kinds/">kinds</a>
-            <a href="/concept/">concept</a>
-            <a href="/ru/kinds/">ru/kinds</a>
-            <a href="/ru/concept/">ru/concept</a>
+            <p class="langs">
+                {% for l in site.langs %}
+                    {% if l == lang %}
+                        <strong class="lang">{{ l }}</strong>
+                    {% else %}
+                        {% capture lang_replacing %}/{% if lang != site.default_lang %}{{ lang }}/{% endif %}{% endcapture %}
+                        {% capture lang_replacement %}/{% if l != site.default_lang %}{{ l }}/{% endif %}{% endcapture %}
+                        <a class="lang" href="{{ page.url | replace_first:lang_replacing,lang_replacement | remove:'index.html' }}">{{ l }}</a>
+                    {% endif %}
+                {% endfor %}
+            </p>
+            {% capture menu_cache %}
+                {% assign menu_result = '' %}
+                {% assign current_post_name = page.url | remove:'index.html' %}
+                {% for item in site.menu %}
+                    {% capture item_languaged %}/{{ lang_prefix }}{{ item }}/{% endcapture %}
+                    {% for post in site.pages %}
+                        {% assign post_name = post.url | remove:'index.html' %}
+
+                        {% assign processed_post = post %}
+                        {% include tenkan/get_title.md %}
+                        {% if item_languaged == post_name %}
+                            {% capture menu_result %}{{ menu_result }}
+                                {% if post_name != current_post_name %}<a href="{{ site.production_url }}{{ post.url | remove:'index.html' }}">{% else %}<strong>{% endif %}
+                                    {{ processed_title }}
+                                {% if post_name != current_post_name %}</a>{% else %}</strong>{% endif %}
+                            {% endcapture %}
+                        {% endif %}
+                    {% endfor %}
+                {% endfor %}
+            {% endcapture %}{{ menu_result }}
         </nav>
     </header>
     <content>
