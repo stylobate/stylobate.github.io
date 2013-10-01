@@ -8,13 +8,19 @@
                 {% assign item_id = item.path | split:'/' | last | remove:'.md' %}
                 {% capture replace_example %} class="example:/{{item.path | remove:item_id | remove:'.md'}}tests/{% endcapture %}
                 {% capture partials_path_remove %}{{ page.partials_path_remove }}{% endcapture %}
+                {% assign partials_path = item.path | split:'/' | last | split:'_' | first | remove:'kind-' %}
+                {% for l in site.langs %}
+                    {% capture partials_path_lang_remove %}.{{ l }}.md{% endcapture %}
+                    {% assign partials_path = partials_path | remove:partials_path_lang_remove %}
+                {% endfor %}
+                {% assign partials_path = partials_path | remove:'.md' %}
 
                 {% capture partial_code %}
-{% if page.partials_source %}[Все файлы блока на гитхабе]({{ page.partials_url }}/tree/master/{{ page.partials }}{{ item.path | split:'/' | last | split:'_' | first | remove:'.md' | remove:'kind-' }}/){:.outer-link}{% endif %}
+{% if page.partials_source %}[Все файлы блока на гитхабе]({{ page.partials_url }}/tree/master/{{ page.partials }}{{ partials_path }}/){:.outer-link}{% endif %}
 [Текст секции на Гитхабе]({{ page.partials_url }}/tree/master/{{ item.path | remove:partials_path_remove }}){:.outer-link}
 {% if page.partials_source %}<span class="small-pseudo-button toggle-button js-outer-toggler"><span class="button-content">исходный код скина</span></span>{% endif %}
 
-<pre class="language-styl is-hidden" data-src="/{{ partials_path_remove }}{{ page.partials }}{{ item.path | split:'/' | last | split:'_' | first | remove:'.md' | remove:'kind-' }}/{{ item.path | split:'/' | last | replace:'.md','.styl' }}"></pre>
+<pre class="language-styl is-hidden" data-src="/{{ partials_path_remove }}{{ page.partials }}{{ partials_path }}/{{ item.path | split:'/' | last | replace:'.md','.styl' }}"></pre>
                 {% endcapture %}
                 
                 {% capture id_replacement_0 %}id="{{ item_id }}_0"{% endcapture %}
