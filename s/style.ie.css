@@ -89,6 +89,10 @@ content > nav > a:hover {
   padding-left: 45px;
   font-size: 0.75em;
 }
+.aside-nav-item_4 {
+  padding-left: 60px;
+  font-size: 0.75em;
+}
 code[class*="language-"],
 pre[class*="language-"] {
   color: #000;
