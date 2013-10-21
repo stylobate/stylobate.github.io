@@ -6,4 +6,4 @@
 	url = https://github.com/stylobate/stylobate-wireframe.git
 [submodule "s/stylobate"]
 	path = s/stylobate
-	url = https://github.com/kizu/stylobate.git
+	url = https://github.com/stylobate/stylobate.git
