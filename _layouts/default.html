@@ -62,9 +62,9 @@
         </nav>
         <article>
             <h1>{{ title }}</h1>
-            {{ processed_content }}
+            {{ processed_content | replace:'<code>','<code class="language-styl">' }}
         </article>
-        {{ partials_content }}
+        {{ partials_content | replace:'<code>','<code class="language-styl">' }}
     </content>
 
     <script src="https://yandex.st/jquery/2.0.2/jquery.min.js"></script>
