@@ -46,3 +46,7 @@ loc:
     stylobate:
         ru: "Стилобат"
         en: "Stylobate"
+
+prose:
+    rooturl: "pages"
+    siteurl: "http://stylobate.github.io"
