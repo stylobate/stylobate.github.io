@@ -22,9 +22,11 @@ If we would separate the styles from the selectors, we could then use those styl
 
 The second thing that would be easily achievable with this concept: **separation of the visual styles from the base layout styles**.
 
-This means that in most cases the layouts and base behaviours would be the same for each and any project. Any button would need the same reset, any inline-block would need its extras for IE, any grid could be made using some of the few approaches. But the *visual styles* of those blocks would be different in those different projects, so our tool should be able to create both styles that could be used across many project (*sdlib*-like), and to create styles individual for a given project, maybe hidden under the namespace (so you could then mix buttons from different projects in one stylesheet).
+This means that in most cases the layouts and base behaviours would be the same for each and any project. Any button would need the same reset, any inline-block would need its extras for IE, any grid could be made using some of the few approaches. But the *visual styles* of those blocks would be different in those different projects, so our tool should be able to create both styles that could be used across many project (*stdlib*-like), and to create styles individual for a given project, maybe hidden under the namespace (so you could then mix buttons from different projects in one stylesheet).
 
 ## Implementation
+
+_**Disclaimer:** the following text is a **draft**, this is the vision of the future, right now you can try this conception using the current Stylus implementation._
 
 The implementation could be divided into two parts: declaration of the “blocks” and their “mapping”.
 
