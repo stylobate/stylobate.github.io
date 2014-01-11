@@ -1,7 +1,7 @@
 // Include all the stuff
-@import "stylobate"
+@require "stylobate"
 $init_wireframe_root = true
-@import "stylobate-wireframe/lib"
+@require "stylobate-wireframe"
 
 // Remove or change this if you'd like to use another skin or use full skin names
 set-skin-namespace('wireframe')
@@ -27,10 +27,10 @@ body
 a
   kind: link underline
 
-@import "blocks/content"
-@import "blocks/nav"
-@import "blocks/prism"
-@import "blocks/code"
-@import "blocks/header"
-@import "blocks/langs"
+@require "blocks/content"
+@require "blocks/nav"
+@require "blocks/prism"
+@require "blocks/code"
+@require "blocks/header"
+@require "blocks/langs"
 
