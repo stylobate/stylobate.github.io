@@ -40,10 +40,9 @@
                     {% capture item_languaged %}/{{ lang_prefix }}{{ item }}/{% endcapture %}
                     {% for post in site.pages %}
                         {% assign post_name = post.url | remove:'index.html' %}
-
-                        {% assign get_title_input = post %}
-                        {% include tenkan/get_title.md %}
                         {% if item_languaged == post_name %}
+                            {% assign get_title_input = post %}
+                            {% include tenkan/get_title.md %}
                             {% capture menu_result %}{{ menu_result }}
                                 {% if post_name != current_post_name %}<a href="{{ site.production_url }}{{ post.url | remove:'index.html' }}">{% else %}<strong>{% endif %}
                                     {{ get_title_output }}
